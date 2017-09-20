@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Directivas incluidas</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container" id="app1">
+		<h1 v-if='mensaje'>Hola estoy conectado</h1>
+		<h2 v-else>Estoy desconectado!!</h2>
+		<h2 v-show='edad'>Edad</h2>
+		<template v-if="mensaje">
+			<h3>Hi.! Richard </h3>
+			<ul>
+				<li><a href="#"></a></li>
+			</ul>
+		</template>
+		<pre>{{$data}}</pre>
+	</div>
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

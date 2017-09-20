@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Renderizando listas</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <br><br>
+	<main class="container" id="app2">
+	<!--usando v-for sin index-->
+		<ul>
+			<li v-for="fruta in frutas">{{fruta}}</li>
+		</ul>
+	<!--usando v-for con index-->
+		<ul>
+			<li v-for="(dia,index) in semana">{{index}}-{{dia}}</li>
+		</ul>
+	<!--usando v-for con value,key,index-->
+		<ul>
+			<li v-for="(value,key,index) in persona">{{value}}</li>
+		</ul>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Ciudad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="arr in arrPersona">
+					<td>{{arr.nombre}}</td>
+					<td>{{arr.apellido}}</td>
+					<td>{{arr.ciudad}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>{{$data}}</pre>
+	</main>
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

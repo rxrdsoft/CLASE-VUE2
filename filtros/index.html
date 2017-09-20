@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>FILTROS</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	<main class="container" id="app5">
+		<ul>
+			<li v-for='juego in busquedaJuego'>{{juego.titulo | textoReves}}</li>
+		</ul>
+		<input type="range" min="0" max="10" v-model="minimo">
+		<input type="search" placeholder="Buscar Juego" v-model='busqueda'>
+		<pre>{{$data}}</pre>
+	</main>
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

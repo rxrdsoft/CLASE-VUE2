@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO COMPONENTES</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<main class="container" id="app27">
+		<usuarios>
+			<h1>Relacion de Usuario</h1>
+		</usuarios>
+		<pre>{{$data}}</pre>
+	</main>
+
+	<template id="usuarios-template">
+		<div class="container">
+			<section>
+				<slot></slot>
+
+				<input type="search" placeholder="Filtar usuario" class="form-control" v-model="busqueda">
+				
+			</section>
+			<hr>
+			<section>
+				<usuario :datos='user' v-for="user in buscar"></usuario>
+			</section>
+		</div>
+	</template>
+
+	<template id="usuario-template">
+			<div class="usuario">
+			 <img :src="datos.foto" alt="">
+			 <p>{{datos.nombre}}</p>
+			 <small>{{datos.correo}}</small>
+			</div>
+	</template>
+
+
+	<script src="js/vue.js"></script>
+	<script src="js/vue-resource.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

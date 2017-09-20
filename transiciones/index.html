@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>TRANSICIONES</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://unpkg.com/animate.css@3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<br>
+	<main class="container" id="app10">
+	<!--TRANSITION-->
+		<button class="btn btn-primary" @click="mostrar=!mostrar">Mostrar/Ocultar</button>
+
+		<transition name="aparecer">
+			<h1 v-if="mostrar" v-text="mensajes.transicion"></h1>
+		</transition>
+
+		<transition name="aparecer" mode="out-in">
+			<h1 v-if="mostrar" v-text="mensajes.entreElementos" key="aparecer"></h1>
+			<h1 v-else key="ocultar">No hay Mensajes</h1>
+		</transition>
+
+
+	<!--ANIMATION-->
+
+		 <button @click="show = !show" class="btn btn-default">Click me!</button>
+  		<transition name="bounce">
+    		<h3 v-if="show" v-text="mensajes.animacion"></h3>
+  		</transition>
+
+  	<!--ANIMATION CUSTOM con animate.css-->
+		<button @click="show1 = !show1" class="btn btn-default">Click me!</button>
+  		<transition 
+  			name="animate.css"
+			enter-active-class="animated rotateInUpLeft"
+			leave-active-class="animated zoomOutUp"
+  			>
+    		<h3 v-if="show1" v-text="mensajes.animationCustom"></h3>
+  		</transition>
+
+		<pre>{{$data}}</pre>
+	</main>
+
+
+
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

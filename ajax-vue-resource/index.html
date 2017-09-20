@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX VUE-RESOURCE</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<main class="container" id="app11">
+		
+		<img v-for="persona in personas" :src="persona.picture.thumbnail" alt="">
+
+		<pre>{{$data}}</pre>
+	</main>
+
+	<script src="js/vue.js"></script>
+	<script src="js/vue-resource.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

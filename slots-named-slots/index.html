@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Slots -named Slots</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<main class="container" id="app20">
+		<alerta tipo="alerta-advertencia" posicion="alerta-top-right">
+			<template slot="header">Esto es un error :(</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer error</template>
+		</alerta>
+
+		<alerta tipo="alerta-error" posicion="alerta-top-left">
+			<template slot="header">Esto es un error :(</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer error</template>
+		</alerta>
+
+		<alerta tipo="alerta-exito" posicion="alerta-bottom-right">
+			<template slot="header">Esto es un error :(</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer error</template>
+		</alerta>
+
+	</main>
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

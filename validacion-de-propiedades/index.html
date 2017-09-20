@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Validacion de propiedades</title>
+	
+	
+</head>
+<body>
+	
+	<main class="container" id="app19">
+		<candidato 
+			v-for="candidato in candidatos"
+			:nombre="candidato.name.first"
+			:correo="candidato.email"
+			:imagen="candidato.picture.thumbnail"
+			:location="candidato.location"
+		>	
+		</candidato>
+		<pre>{{$data}}</pre>
+	</main>
+
+	<template id="candidato-template">
+		<blockquote>
+			<img :src="imagen" alt="" align="right">
+			<h1>{{nombre}}</h1>
+			<h2>{{ correo}}</h2>
+			<ul>
+				<li v-for="value in location" v-text="value"></li>
+			</ul>
+			<hr>
+		</blockquote>
+	</template>
+
+	<script src="js/vue.js"></script>
+	<script src="js/vue-resource.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

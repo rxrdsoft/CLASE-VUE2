@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Component Templates</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	<main class="container" id="app16">
+
+		<app-ganador :personas="participantes"></app-ganador>
+		
+		<br><br>
+		<pre>{{$data}}</pre>
+	</main>
+	<template id="lista">
+		<main> <!--Debe de estar dentro de un contenedor(root element) para que acepte mas elementos -->
+		<h1>El Ganador es: {{nameGanador}}</h1>
+		<ul>
+			<li v-for="persona in personas" v-text="persona"></li>
+		</ul>
+		<button class="btn btn-primary" @click="elegirGanador">Elegir Ganador!</button>
+		</main>
+	</template>
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

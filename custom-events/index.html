@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<title>Slots -named Slots</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+
+	<main class="container" id="app20">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<button class="btn btn-primary"@click="mostrarExito=true">Exito</button>
+		<button class="btn btn-primary"@click="mostrarError=true">Error</button>
+		<button class="btn btn-primary"@click="mostrarAdvertencia=true">Advertencia</button>
+
+		<alerta @ocultar="mostrarAdvertencia=false" v-show="mostrarAdvertencia" tipo="alerta-advertencia" posicion="alerta-top-right">
+			<template slot="header">Esto es un advertencia :(</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer advertencia</template>
+		</alerta>
+
+		<alerta @ocultar="mostrarError=false" v-show="mostrarError" tipo="alerta-error" posicion="alerta-top-left">
+			<template slot="header">Esto es un error :(</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer error</template>
+		</alerta>
+
+		<alerta @ocultar="mostrarExito=false" v-show="mostrarExito" tipo="alerta-exito" posicion="alerta-bottom-right">
+			<template slot="header">Esto es exito :)</template>
+			<template>
+				Hola como estas ya tngo hambre jeje
+			</template>
+			<template slot="footer"> Footer exito</template>
+		</alerta>
+		
+		<pre>{{$data}}</pre>
+	</main>
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ENVIAR PERSONAL VUE-RESOURCE POST</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container" id="myApp">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4">
+				<form @submit.prevent="enviar">
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Nombre" v-model="persona.nombre" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Apellido" v-model="persona.apellido" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Telefono" v-model="persona.telefono" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Direccion" v-model="persona.direccion" required>
+					</div>
+					<button class="btn btn-primary pull-right">Enviar</button>
+
+				</form>
+			</div>
+		</div>
+		<pre>{{$data}}</pre>
+	</div>
+	<script src="js/vue.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/vue-resource.min.js"></script>
+	<script src="js/enviar.js"></script>
+</body>
+</html>

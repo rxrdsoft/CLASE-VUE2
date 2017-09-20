@@ -1,0 +1,59 @@
+body{
+	overflow-x:hidden;
+}
+.page-title .title_right .pull-right {
+   	margin: 0;
+   	margin-top: 10px;
+}
+.btn{
+	border-radius: 20px;
+}
+textarea{
+	resize: none;
+	padding-right: 12px;
+	padding-left: 12px;
+
+}
+.top_search .form-control{
+	border: 1px solid rgb(221,226,232);
+}
+.table-responsive{
+	border: 0;
+}
+.tabpanel table .editarDoc,.eliminarDoc,.bajarDoc{
+	background-color: transparent;
+	border:0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+div.dataTables_wrapper div.dataTables_filter input{
+	border-radius: 30px;
+}
+div.dataTables_wrapper div.dataTables_length select{
+	border-radius: 10px;
+}
+
+.projects .btn-success{
+	padding: 1px 5px;
+	font-size: 12px;
+}
+
+
+@media screen and (min-width: 768px){
+	.projects .btn-xs{
+		display: block;
+	}
+
+}
+
+
+@media screen and (min-width: 906px){
+	.projects .btn-xs{
+		display: inline-block;
+	}
+	.table-responsive>.table>tbody>tr>td{
+		white-space:nowrap;
+	}
+
+}
+

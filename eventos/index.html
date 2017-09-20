@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EVENTOS</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	<main class="container" id="app3">
+		<input type="text" placeholder="Escribir tarea" class="form-control" v-model='tareaInput'>
+		<br>
+		<button class="btn btn-primary" @click='agregarT(tareaInput)'>Agregar tarea</button>
+		<br><br>
+		<main class="panel panel-default">
+			<ul>
+				<li v-for='tarea in tareas'>{{tarea}}</li>
+			</ul>
+		</main>
+		<pre>{{$data}}</pre>
+	</main>
+
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

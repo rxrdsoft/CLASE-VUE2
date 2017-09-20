@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data bindind clases-atributos</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<main class="container" id="app8">
+		<h1>Lista de Tareas</h1>
+		<ul>
+			<li v-for='tarea in tareas' v-on:click='estadoTarea(tarea)'
+			v-bind:class='{completado:tarea.completado}'>{{tarea.name}}</li>
+		</ul>
+		<br><br>
+		<h3>Tareas completadas {{tareasCompletadas.length}}</h3>
+		<pre>{{$data}}</pre>
+	</main>
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

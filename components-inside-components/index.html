@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Componentes dentro de componentes</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	
+	<main class="container" id="app23">
+		<lista-tareas :tareas="tareas">
+			Las mejores tareas del 2017
+		</lista-tareas>
+
+		<pre>{{$data}}</pre>
+	</main>
+
+	<script src="js/vue.js"></script>
+	<script src="js/vue-resource.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

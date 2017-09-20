@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1,user-scalable=no">
+	<title>TEST ENVIO DATOS</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		.form{
+			padding-top: 1em;
+			padding-right: 1em;
+			padding-left: 1em;
+		}
+		.panel{
+			background-color: rgba(255,255,255,0.5);
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<main>
+		<div class="container">
+		<div class="row">
+		<div class="col-md-offset-4 col-sm-offset-3 col-xs-offset-1 col-sm-6 col-md-4 col-xs-10">
+			<div class="panel panel-default">
+		<form action="insertar.php" class="form" method="POST" autocomplete="off">
+		<!--autocomplete para input  -->
+			<div class="form-group">
+				
+				<input type="text" class="form-control" placeholder="&#128100; Nombre" name="nombre"> 
+			</div>
+			<div class="form-group">
+				
+				<input type="text" class="form-control" placeholder="&#128221; Apellido" name="apellido"> 
+			</div>
+			<div class="form-group">
+				
+				<input type="tel" class="form-control" placeholder="&#128222;Telefono" name="telefono"> 
+			</div>
+			<div class="form-group">
+				
+				<input type="text" class="form-control" placeholder="&#127968;Direccion" name="direccion"> 
+			</div>
+			<div class="form-group">
+				<div class="clearfix">
+					<button  type="submit" class="btn btn-primary pull-right" name="enviar">Enviar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+		</div>
+	</div>
+	</div>
+	</main>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.backstretch.min.js"></script>
+	<script>
+		 $.backstretch([
+      "http://dl.dropbox.com/u/515046/www/outside.jpg"
+    , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
+    , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
+  ], {duration: 3000, fade: 750});
+	</script>
+	<script>
+		$(document).ready(function(){
+ 
+     	console.log($(window).width());
+     	console.log($(window).height());
+ 
+          // aquí le pasamos la clase o id de nuestro div a centrar (en este caso "caja")
+          	$('main').css({
+               position:'relative',
+               left: ($(window).width() - $('main').outerWidth())/2,
+               top: ($(window).height() - $('main').outerHeight())/2
+          });
+});
+	</script>
+</body>
+</html>

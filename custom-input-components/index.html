@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Custom Input Components</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<br>
+	<main class="container" id="app26">
+<!--	<input type="text" v-model="contrasena">-->
+<!--	<input type="text" :value="contrasena" @input="contrasena=$event.target.value">-->
+ 		<contrasena v-model="contrasena"></contrasena>
+ 		<h1>{{contrasena}}</h1>
+		<br><br>
+		<pre>{{$data}}</pre>
+	</main>
+
+
+	<script src="js/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
